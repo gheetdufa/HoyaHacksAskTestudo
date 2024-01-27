@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered GIF</title>
+    <style>
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-image: url('md-flag-1920.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        #iframeContainer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%; /* Adjust the width as needed */
+            height: 60vh; /* Adjust the height as needed */
+        }
+    </style>
+</head>
+<body>
+
+    <img src="testudo-gif-2.gif" alt="Centered GIF">
+
+    <div id="iframeContainer">
+        <iframe src="https://web.powerva.microsoft.com/environments/Default-c85487db-d5f3-45e1-9158-876d58525ccf/bots/crb0b_testudoCopilot/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+    </div>
+</body>
+</html>
