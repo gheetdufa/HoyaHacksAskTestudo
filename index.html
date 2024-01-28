@@ -208,14 +208,14 @@ git mv README.md docs/<!DOCTYPE html>
 
     <div id="audioContainer">
         <audio id="audio" controls>
-            <source src="./MarylandVictorySong.mov" type="audio/mp3">
+            <source src="public/MarylandVictorySong.mov" type="audio/mp3">
         </audio>
         <button id="audioButton" class="audio-button" onclick="toggleAudio()">Roll Terps!</button>
     </div>
 
     <script> 
         // Initialize the audio element with the source
-        const audio = new Audio('./MarylandVictorySong.mov');
+        const audio = new Audio('public/MarylandVictorySong.mov');
     
         function drag(ev) {
             ev.dataTransfer.setData("text/plain", ""); // Necessary for Firefox
