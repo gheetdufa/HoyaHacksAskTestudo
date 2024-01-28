@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Centered GIF</title>
+    <style>
+        body {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            background-image: url('md-flag-1920.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 50%;
+            max-height: 50%;
+        }
+
+        #iframeContainer {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%; /* Adjust the width as needed */
+            height: 60vh; /* Adjust the height as needed */
+            border-radius: 15px; /* Add border-radius for rounded corners */
+            overflow: hidden; /* Hide content that exceeds rounded corners */
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Add box-shadow for a subtle elevation effect */
+            background-color: #fff; /* Set a background color */
+            cursor: move; /* Set cursor to indicate draggable */
+            transition: background-color 0.3s; /* Smooth transition for background-color change */
+        }
+
+        #iframeContainer:hover {
+            background-color: #e0e0e0; /* Change background color on hover */
+        }
+
+        #titleBox {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 36px;
+            color: red;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            overflow: hidden; /* Ensure the text doesn't overflow */
+            white-space: nowrap; /* Prevent line breaks */
+            padding: 10px; /* Add padding to create a bubble around the text */
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 15px; /* Add rounded corners */
+            border-right: 3px solid white; /* Create a border for the typing effect */
+            animation: typing 5s steps(40, end) 1.5s forwards, blink-caret 4s step-end 15s infinite;
+        }
+
+        .fa-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+        }
+
+        .fa-box {
+            margin-right: 10px;
+        }
+
+        .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-facebook {
+            background-color: #3b5998;
+        }
+
+        .fa-twitter {
+            background-color: #1da1f2;
+        }
+
+        .fa-linkedin {
+            background-color: #0077b5;
+        }
+
+        .fa-instagram {
+            background-color: #c22498;
+        }
+
+        .fa-youtube-play {
+            background-color: #f40833;
+        }
+
+        #audioContainer {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        #audio {
+            display: none; /* Initially hide the audio player */
+        }
+
+        .audio-button {
+            padding: 10px;
+            margin-left: 5px;
+            height: 75px;
+            width: 150px;
+            cursor: pointer;
+            background-color: rgb(218, 172, 4);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-family: "Poppins", sans-serif;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0;
+            }
+            8% {
+                width: 8%;
+            }
+            16% {
+                width: 16%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from,
+            to {
+                border-color: transparent;
+            }
+            5% {
+                border-color: white;
+            }
+
+            10% {
+                border-color: transparent;
+            }
+        }
+
+        /* Add custom styles for the countdown */
+        .custom-countdown {
+            font-size: 16px; /* Adjust the font size as needed */
+            padding: 5px 10px; /* Adjust the padding as needed */
+        }
+    </style>
+</head>
+<body>
+    
+    <img src="testudo-gif-2.gif" alt="Centered GIF">
+
+    <div id="titleBox">askTestudo&#8482</div>
+    <div id="animated-face"></div>
+
+    <div id="iframeContainer" draggable="true" ondragstart="drag(event)">
+        <iframe src="https://web.powerva.microsoft.com/environments/Default-c85487db-d5f3-45e1-9158-876d58525ccf/bots/crb0b_askTestudoDygo-b/webchat?__version__=2" frameborder="100" style="width: 100%; height: 100%;"></iframe>
+    </div>
+
+    <div class="fa-container">
+        <div class="fa-box">
+            <a href="https://www.facebook.com/UnivofMaryland" class="fa fa-facebook"></a>
+        </div>
+        <div class="fa-box">
+            <a href="https://twitter.com/UofMaryland" class="fa fa-twitter"></a>
+        </div>
+        <div class="fa-box">
+            <a href="https://www.linkedin.com/school/university-of-maryland/mycompany/verification/" class="fa fa-linkedin"></a>
+        </div>
+        <div class="fa-box">
+            <a href="https://www.instagram.com/univofmaryland/" class="fa fa-instagram"></a>
+        </div>
+        <div class="fa-box">
+            <a href="https://www.youtube.com/@UofMaryland" class="fa fa-youtube-play"></a>
+        </div>
+    </div>
+
+    <div id="audioContainer">
+        <audio id="audio" controls>
+            <source src="./MarylandVictorySong.mov" type="audio/mp3">
+        </audio>
+        <button id="audioButton" class="audio-button" onclick="toggleAudio()">Roll Terps!</button>
+    </div>
+
+    <script> 
+        // Initialize the audio element with the source
+        const audio = new Audio('./MarylandVictorySong.mov');
+    
+        function drag(ev) {
+            ev.dataTransfer.setData("text/plain", ""); // Necessary for Firefox
+        }
+
+        document.addEventListener("dragover", function (event) {
+            event.preventDefault();
+        });
+
+        document.addEventListener("drop", function (event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("text/plain");
+            var iframe = document.getElementById("iframeContainer");
+            var offsetX = event.clientX - iframe.offsetWidth / 10000;
+            var offsetY = event.clientY - iframe.offsetHeight / 10000;
+
+            iframe.style.left = offsetX + "px";
+            iframe.style.top = offsetY + "px";
+        });
+
+        function toggleAudio() {
+            var audioButton = document.getElementById("audioButton");
+
+            if (audio.paused) {
+                audio.play();
+                audioButton.textContent = "Unroll Terps";
+            } else {
+                audio.pause();
+                audioButton.textContent = "Roll Terps!";
+            }
+        }
+    </script>
+    
+</body>
+</html>

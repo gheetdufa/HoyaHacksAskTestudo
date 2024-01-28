@@ -46,3 +46,24 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   });
 });
+// script.js
+var audio = document.getElementById("audio");
+var audioButton = document.getElementById("audioButton");
+
+audioButton.addEventListener("click", toggleAudio);
+
+function toggleAudio() {
+    if (audio.paused) {
+        audio.play().catch(function(error) {
+            console.error('Error playing audio:', error);
+        });
+        audioButton.textContent = "Pause Audio";
+    } else {
+        audio.pause();
+        audioButton.textContent = "Play Audio";
+    }
+}
+
+
+
+
